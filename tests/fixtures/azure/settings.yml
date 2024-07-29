@@ -15,8 +15,9 @@ embeddings:
 input:
   type: blob
   file_type: text
-  connection_string: ${LOCAL_BLOB_STORAGE_CONNECTION_STRING}
+  connection_string: ${BLOB_STORAGE_CONNECTION_STRING}
   container_name: azurefixture
+  storage_account_blob_url: ${BLOB_STORAGE_URL}
   base_dir: input
 
 cache:
@@ -24,15 +25,19 @@ cache:
   connection_string: ${BLOB_STORAGE_CONNECTION_STRING}
   container_name: cicache
   base_dir: cache_azure_ai
+  storage_account_blob_url: ${BLOB_STORAGE_URL}
+
 
 storage:
   type: blob
-  connection_string: ${LOCAL_BLOB_STORAGE_CONNECTION_STRING}
+  connection_string: ${BLOB_STORAGE_CONNECTION_STRING}
   container_name: azurefixture
+  storage_account_blob_url: ${BLOB_STORAGE_URL}
   base_dir: output
 
 reporting:
   type: blob
-  connection_string: ${LOCAL_BLOB_STORAGE_CONNECTION_STRING}
+  connection_string: ${BLOB_STORAGE_CONNECTION_STRING}
+  storage_account_blob_url: ${BLOB_STORAGE_URL}
   container_name: azurefixture
   base_dir: reports
