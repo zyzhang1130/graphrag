@@ -246,7 +246,7 @@ class TestIndexer:
         {
             **os.environ,
             "BLOB_STORAGE_CONNECTION_STRING": os.getenv(
-                "GRAPHRAG_CACHE_CONNECTION_STRING", ""
+                "GRAPHRAG_CACHE_CONNECTION_STRING", None
             ),
             "LOCAL_BLOB_STORAGE_CONNECTION_STRING": WELL_KNOWN_AZURITE_CONNECTION_STRING,
             "GRAPHRAG_CHUNK_SIZE": "1200",
