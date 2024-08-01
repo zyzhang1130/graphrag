@@ -33,7 +33,7 @@ def _load_fixtures():
     # use the min-csv smoke test to hydrate the docsite parquet artifacts (see gh-pages.yml)
     subfolders = ["min-csv"] if gh_pages else sorted(os.listdir(fixtures_path))
 
-    for subfolder in subfolders[0:1]:
+    for subfolder in subfolders:
         if not os.path.isdir(fixtures_path / subfolder):
             continue
 
