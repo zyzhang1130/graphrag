@@ -40,7 +40,7 @@ def _load_fixtures():
         config_file = fixtures_path / subfolder / "config.json"
         params.append((subfolder, json.loads(config_file.read_bytes().decode("utf-8"))))
 
-    return params[1:]  # don't run azure for now
+    return params
 
 
 def pytest_generate_tests(metafunc):
@@ -76,8 +76,8 @@ def cleanup(skip: bool = False):
             finally:
                 if not skip:
                     root = Path(kwargs["input_path"])
-                    shutil.rmtree(root / "output", ignore_errors=True)
-                    shutil.rmtree(root / "cache", ignore_errors=True)
+                    # shutil.rmtree(root / "output", ignore_errors=True)
+                    # shutil.rmtree(root / "cache", ignore_errors=True)
 
         return wrapper
 
