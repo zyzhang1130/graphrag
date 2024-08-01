@@ -109,8 +109,6 @@ stages:
             inlineScript: |
               export AZURE_AI_SEARCH_URL_ENDPOINT=$(AZURE_AI_SEARCH_URL_ENDPOINT)
               export AZURE_AI_SEARCH_API_KEY=$(AZURE_AI_SEARCH_API_KEY)
-              export GRAPHRAG_CACHE_CONNECTION_STRING=$(GRAPHRAG_CACHE_CONNECTION_STRING)
-              export BLOB_STORAGE_URL=$(BLOB_STORAGE_URL)
               poetry run poe test_smoke   
     
         - task: PublishPipelineArtifact@1  
