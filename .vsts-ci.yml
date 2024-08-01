@@ -18,7 +18,7 @@ variables:
   GRAPHRAG_CACHE_CONNECTION_STRING: $(BLOB_STORAGE_CONNECTION_STRING)  
   GRAPHRAG_CACHE_CONTAINER_NAME: "cicache"  
   GRAPHRAG_CACHE_BASE_DIR: "cache"  
-  GRAPHRAG_LLM_MODEL: gpt-3.5-turbo-16k  
+  GRAPHRAG_LLM_MODEL: gpt-35-turbo-16k  
   GRAPHRAG_EMBEDDING_MODEL: text-embedding-ada-002  
   BLOB_STORAGE_URL: $(GRAPHRAG_CACHE_URL)
   GRAPHRAG_LLM_TPM: 45000 # 180,000 / 4  
@@ -51,7 +51,7 @@ stages:
               ArtifactName: "CodeAnalysisLogs"  
               ArtifactType: "Container"  
 
-  - stage: AzureTests 
+  - stage: SmokeTests 
     dependsOn: []
     jobs:
     - job: smoke_tests  
