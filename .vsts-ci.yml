@@ -116,7 +116,7 @@ stages:
               export AZURE_AI_SEARCH_URL_ENDPOINT=$(AZURE_AI_SEARCH_URL_ENDPOINT)
               export AZURE_AI_SEARCH_API_KEY=$(AZURE_AI_SEARCH_API_KEY)
               
-              poetry run poe test_smoke   
+              poetry run poe test_smoke -v
     
         - task: PublishPipelineArtifact@1  
           displayName: 'Upload Smoke Test Artifacts'  
