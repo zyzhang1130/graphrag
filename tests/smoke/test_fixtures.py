@@ -255,6 +255,9 @@ class TestIndexer:
             "GRAPHRAG_CHUNK_OVERLAP": "0",
             "AZURE_AI_SEARCH_URL_ENDPOINT": os.getenv("AZURE_AI_SEARCH_URL_ENDPOINT"),
             "AZURE_AI_SEARCH_API_KEY": os.getenv("AZURE_AI_SEARCH_API_KEY"),
+            "GRAPHRAG_STORAGE_STORAGE_ACCOUNT_BLOB_URL": os.getenv(
+                "GRAPHRAG_STORAGE_STORAGE_ACCOUNT_BLOB_URL"
+            ),
         },
         clear=True,
     )
