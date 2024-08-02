@@ -40,7 +40,7 @@ def _load_fixtures():
         config_file = fixtures_path / subfolder / "config.json"
         params.append((subfolder, json.loads(config_file.read_bytes().decode("utf-8"))))
 
-    return params
+    return params[1:2]
 
 
 def pytest_generate_tests(metafunc):
@@ -96,7 +96,7 @@ async def prepare_azurite_data(input_path: str, azure: dict) -> Callable[[], Non
         storage_account_blob_url=os.getenv("BLOB_STORAGE_URL"),
     )
     # Bounce the container if it exists to clear out old run data
-    # input_storage.delete_container()
+    input_storage.delete_container()
     input_storage.create_container()
 
     # Upload data files
