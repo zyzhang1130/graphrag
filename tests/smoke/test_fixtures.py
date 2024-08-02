@@ -76,8 +76,8 @@ def cleanup(skip: bool = False):
             finally:
                 if not skip:
                     root = Path(kwargs["input_path"])
-                    # shutil.rmtree(root / "output", ignore_errors=True)
-                    # shutil.rmtree(root / "cache", ignore_errors=True)
+                    shutil.rmtree(root / "output", ignore_errors=True)
+                    shutil.rmtree(root / "cache", ignore_errors=True)
 
         return wrapper
 
