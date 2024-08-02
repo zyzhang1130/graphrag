@@ -111,6 +111,8 @@ stages:
               export GRAPHRAG_LLM_DEPLOYMENT_NAME=$(GRAPHRAG_LLM_DEPLOYMENT_NAME)
               export GRAPHRAG_EMBEDDING_DEPLOYMENT_NAME=$(GRAPHRAG_EMBEDDING_DEPLOYMENT_NAME)
               export BLOB_STORAGE_URL=$(BLOB_STORAGE_URL)
+              export AZURE_AI_SEARCH_URL_ENDPOINT=$(AZURE_AI_SEARCH_URL_ENDPOINT)
+              export AZURE_AI_SEARCH_API_KEY=$(AZURE_AI_SEARCH_API_KEY)
               
               poetry run poe test_smoke   
     
