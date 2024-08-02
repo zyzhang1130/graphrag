@@ -94,9 +94,8 @@ async def prepare_azurite_data(input_path: str, azure: dict) -> Callable[[], Non
 
     root = Path(input_path)
     input_storage = BlobPipelineStorage(
-        connection_string=None,
+        connection_string=WELL_KNOWN_AZURITE_CONNECTION_STRING,
         container_name=input_container,
-        storage_account_blob_url=os.getenv("GRAPHRAG_STORAGE_STORAGE_ACCOUNT_BLOB_URL"),
     )
     # Bounce the container if it exists to clear out old run data
     input_storage.delete_container()
@@ -253,9 +252,6 @@ class TestIndexer:
             "GRAPHRAG_CHUNK_OVERLAP": "0",
             "AZURE_AI_SEARCH_URL_ENDPOINT": os.getenv("AZURE_AI_SEARCH_URL_ENDPOINT"),
             "AZURE_AI_SEARCH_API_KEY": os.getenv("AZURE_AI_SEARCH_API_KEY"),
-            "GRAPHRAG_STORAGE_STORAGE_ACCOUNT_BLOB_URL": os.getenv(
-                "GRAPHRAG_STORAGE_STORAGE_ACCOUNT_BLOB_URL"
-            ),
         },
         clear=True,
     )

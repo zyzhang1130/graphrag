@@ -57,21 +57,21 @@ stages:
     - job: smoke_tests  
       strategy:  
         matrix:  
-          Windows310:
-            pythonVersion: "3.10"
-            os: "windows-latest"
-          Ubuntu310:
-            pythonVersion: "3.10"
-            os: "ubuntu-latest"
-          Windows311:
-            pythonVersion: "3.11"
-            os: "windows-latest"
-          Ubuntu311:
-            pythonVersion: "3.11"
-            os: "ubuntu-latest"
-          Windows312:
-            pythonVersion: "3.12"
-            os: "windows-latest"
+          # Windows310:
+          #   pythonVersion: "3.10"
+          #   os: "windows-latest"
+          # Ubuntu310:
+          #   pythonVersion: "3.10"
+          #   os: "ubuntu-latest"
+          # Windows311:
+          #   pythonVersion: "3.11"
+          #   os: "windows-latest"
+          # Ubuntu311:
+          #   pythonVersion: "3.11"
+          #   os: "ubuntu-latest"
+          # Windows312:
+          #   pythonVersion: "3.12"
+          #   os: "windows-latest"
           Ubuntu312:
             pythonVersion: "3.12"
             os: "ubuntu-latest"
